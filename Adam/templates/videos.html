@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Child-friendly font -->
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'adamgallery/css/style.css' %}">
+<h1>Adam's Videos Gallery</h1>
+
+<div class="video-gallery">
+    <div class="gallery-video">
+        <video id="video1" src="{% static 'adamgallery/videos/1.mp4' %}" alt="Video 1" preload="metadata"></video>
+        <button class="play-button" onclick="playVideo('video1')">Play Video</button>
+    </div>
+    <div class="gallery-video">
+        <video id="video2" src="{% static 'adamgallery/videos/2.mp4' %}" alt="Video 2" preload="metadata"></video>
+        <button class="play-button" onclick="playVideo('video2')">Play Video</button>
+    </div>
+    <div class="gallery-video">
+        <video id="video3" src="{% static 'adamgallery/videos/3.mp4' %}" alt="Video 3" preload="metadata"></video>
+        <button class="play-button" onclick="playVideo('video3')">Play Video</button>
+    </div>
+    <div class="gallery-video">
+        <video id="video4" src="{% static 'adamgallery/videos/4.mp4' %}" alt="Video 4" preload="metadata"></video>
+        <button class="play-button" onclick="playVideo('video4')">Play Video</button>
+    </div>
+    <div class="gallery-video">
+        <video id="video5" src="{% static 'adamgallery/videos/5.mp4' %}" alt="Video 5" preload="metadata"></video>
+        <button class="play-button" onclick="playVideo('video5')">Play Video</button>
+    </div>
+</div>
+<script>
+    function playVideo(videoId) {
+        const video = document.getElementById(videoId);
+        if (video.paused) {
+            video.play(); // Play the video if it's paused
+        } else {
+            video.pause(); // Pause the video if it's playing
+        }
+    }
+</script>
+<div class="button-container">
+    <a href="{% url 'images_folder' %}" class="button">Open Images Folder</a>
+    <a href="{% url 'home' %}" class="button">Back to Home</a>
+    <a href="{% url 'album' %}" class="button">Open All</a>
+</div>
+
+{% endblock %}

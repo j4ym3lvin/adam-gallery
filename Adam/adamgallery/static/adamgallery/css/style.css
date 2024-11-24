@@ -1,0 +1,136 @@
+body {
+    font-family: 'Comic Neue', cursive; /* Child-friendly font */
+    margin: 0;
+    padding: 20px;
+}
+
+
+h1 {
+    text-align: center;
+    color: #40a0ff; /* Bright blue color for the title */
+    font-size: 2.5em; /* Large title size */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #000000; /* Shadow for a fun effect */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Space between images */
+    padding: 10px; /* Padding around the gallery */
+}
+
+.gallery-image {
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+    border: 5px solid #ffeb3b; /* Bright yellow border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.gallery-image img {
+    width: 100%; /* Make images responsive */
+    max-height: 300px; /* Set a maximum height for the images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+    border-radius: 10px; /* Match the image corners with the container */
+}
+
+.home-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #40a0ff; /* Bright blue color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.button:hover {
+    background-color: #008CBA; /* Darker blue on hover */
+}
+
+/* Video Gallery Styles */
+/* Video Gallery Styles */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Space between videos */
+    padding: 10px; /* Padding around the gallery */
+}
+
+.gallery-video {
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+    border: 5px solid #ffeb3b; /* Bright yellow border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.gallery-video:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+video {
+    width: 100%; /* Make video responsive */
+    max-height: 300px; /* Set a maximum height for the videos */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+    border-radius: 10px; /* Match the video corners with the container */
+}
+
+/* Button Container Styles */
+.button-container {
+    text-align: center; /* Center the buttons */
+    margin-top: 30px; /* Space above the button container */
+}
+
+.button {
+    display: inline-block; /* Inline block for buttons */
+    padding: 15px 25px; /* Padding for buttons */
+    margin: 10px; /* Space between buttons */
+    background-color: #3498db; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.button:active {
+    transform: translateY(0); /* Reset lift effect when clicked */
+}
+
+.play-button {
+    position:center;
+    background-color: #3498db; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.play-button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}

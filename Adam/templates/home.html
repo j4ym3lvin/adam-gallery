@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'adamgallery/css/style.css' %}">
+
+<div class="home-container">
+    <h1>Welcome to Adam's Gallery</h1>
+    <p>Please choose an option:</p>
+    <div class="button-container">
+        <a href="{% url 'images_folder' %}" class="button">Open Images Folder</a>
+        <a href="{% url 'videos_folder' %}" class="button">Open Videos Folder</a>
+        <a href="{% url 'album' %}" class="button">Open All</a>
+    </div>
+</div>
+{% endblock %}

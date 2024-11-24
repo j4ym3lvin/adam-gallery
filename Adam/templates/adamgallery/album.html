@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Child-friendly font -->
+
+<link rel="stylesheet" type="text/css" href="{% static 'adamgallery/css/style.css' %}">
+
+<h1>___________________Adam's Pictures__________________</h1>
+<div class="gallery">
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/1.jpg' %}" alt="Image 1">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/2.jpg' %}" alt="Image 2">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/3.jpg' %}" alt="Image 3">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/4.jpg' %}" alt="Image 4">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/5.jpg' %}" alt="Image 5">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/6.jpg' %}" alt="Image 6">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/7.jpg' %}" alt="Image 7">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/8.jpg' %}" alt="Image 8">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/9.jpg' %}" alt="Image 9">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/10.jpg' %}" alt="Image 10">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/11.jpg' %}" alt="Image 11">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/12.jpg' %}" alt="Image 12">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/13.jpg' %}" alt="Image 13">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/14.jpg' %}" alt="Image 14">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/15.jpg' %}" alt="Image 15">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/16.jpg' %}" alt="Image 16">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/17.jpg' %}" alt="Image 17">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/18.jpg' %}" alt="Image 18">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/19.jpg' %}" alt="Image 19">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/20.jpg' %}" alt="Image 20">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/21.jpg' %}" alt="Image 21">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/22.jpg' %}" alt="Image 22">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/23.jpg' %}" alt="Image 23">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/24.jpg' %}" alt="Image 22">
+    </div>
+    <div class="gallery-image">
+        <img src="{% static 'adamgallery/images/25.jpg' %}" alt="Image 23">
+    </div>
+</div>
+
+<h1>___________________Adam's Videos__________________</h1>
+<div class="video-gallery">
+    <div class="gallery-video">
+        <video id="video1" src="{% static 'adamgallery/videos/1.mp4' %}" alt="Video 1" preload="metadata"></video>
+        <button class="play-button" onclick="playVideo('video1')">Play Video</button>
+    </div>
+    <div class="gallery-video">
+        <video id="video2" src="{% static 'adamgallery/videos/2.mp4' %}" alt="Video 2" preload="metadata"></video>
+        <button class="play-button" onclick="playVideo('video2')">Play Video</button>
+    </div>
+    <div class="gallery-video">
+        <video id="video3" src="{% static 'adamgallery/videos/3.mp4' %}" alt="Video 3" preload="metadata"></video>
+        <button class="play-button" onclick="playVideo('video3')">Play Video</button>
+    </div>
+    <div class="gallery-video">
+        <video id="video4" src="{% static 'adamgallery/videos/4.mp4' %}" alt="Video 4" preload="metadata"></video>
+        <button class="play-button" onclick="playVideo('video4')">Play Video</button>
+    </div>
+    <div class="gallery-video">
+        <video id="video5" src="{% static 'adamgallery/videos/5.mp4' %}" alt="Video 5" preload="metadata"></video>
+        <button class="play-button" onclick="playVideo('video5')">Play Video</button>
+    </div>
+</div>
+
+
+<script>
+    function playVideo(videoId) {
+        const video = document.getElementById(videoId);
+        if (video.paused) {
+            video.play(); // Play the video if it's paused
+        } else {
+            video.pause(); // Pause the video if it's playing
+        }
+    }
+</script>
+
+<div class="button-container">
+    <a href="{% url 'home' %}" class="button">Back to Home</a>
+</div>
+
+
+
+{% endblock %}
